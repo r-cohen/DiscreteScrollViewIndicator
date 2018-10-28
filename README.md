@@ -20,3 +20,6 @@ DiscreteScrollViewIndicator pageIndicator = DiscreteScrollViewIndicator.Builder(
 discreteScrollView.addItemDecoration(pageIndicator);
 ```
 
+### Inspired by
+[bleeding182's recyclerviewItemDecorations](https://github.com/bleeding182/recyclerviewItemDecorations)
+
