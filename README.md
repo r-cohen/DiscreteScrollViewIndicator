@@ -10,7 +10,7 @@ discreteScrollView.addItemDecoration(pageIndicator);
 ## Customize
 ```java
 float DP = Resources.getSystem().getDisplayMetrics().density;
-DiscreteScrollViewIndicator pageIndicator = DiscreteScrollViewIndicator.Builder(discreteScrollView);
+DiscreteScrollViewIndicator pageIndicator = DiscreteScrollViewIndicator.Builder(discreteScrollView)
 	.setColorActive(getColor(R.color.ap_white))
 	.setColorInactive(getColor(R.color.pagerItem))
 	.setIndicatorStrokeWidth(4 * DP)
