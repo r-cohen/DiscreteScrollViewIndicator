@@ -20,6 +20,11 @@ DiscreteScrollViewIndicator pageIndicator = DiscreteScrollViewIndicator.Builder(
 discreteScrollView.addItemDecoration(pageIndicator);
 ```
 
+## Usage with InfinitePagerAdapter & InfiniteScrollAdapter
+The indicator automatically attempts to fetch the number of items through the adapter unless you set it manually as follows.
+```java
+pageIndicator.setItemsCount(itemsCount);
+```
+
 ### Inspired by
 [bleeding182's recyclerviewItemDecorations](https://github.com/bleeding182/recyclerviewItemDecorations)
-
