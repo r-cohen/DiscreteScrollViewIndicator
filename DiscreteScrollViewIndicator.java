@@ -25,6 +25,8 @@ public class DiscreteScrollViewIndicator extends RecyclerView.ItemDecoration {
         PARENT_BOTTOM
     }
 
+    private int itemsCount = -1;
+
     private static final float DP = Resources.getSystem().getDisplayMetrics().density;
 
     /**
@@ -78,7 +80,10 @@ public class DiscreteScrollViewIndicator extends RecyclerView.ItemDecoration {
             return;
         }
 
-        int itemCount = parent.getAdapter().getItemCount();
+        int itemCount = itemsCount;
+        if (itemCount == -1) {
+            itemCount = parent.getAdapter().getItemCount();
+        }
         if (itemCount == 0) {
             return;
         }
@@ -211,6 +216,10 @@ public class DiscreteScrollViewIndicator extends RecyclerView.ItemDecoration {
     public DiscreteScrollViewIndicator matchParentWidth() {
         mMatchParentWidth = true;
         return this;
+    }
+
+    public DiscreteScrollViewIndicator setItemsCount(int count) {
+        itemsCount = count;
     }
 }
 
